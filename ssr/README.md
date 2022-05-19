@@ -1,4 +1,4 @@
-# sockd
+# Shadowsocksr
 
 ## 使用方法
 
