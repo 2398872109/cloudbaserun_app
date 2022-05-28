@@ -19,7 +19,7 @@
 
 6、按如下配置镜像构建规则：
     触发规则分支选择main；
-    Dockerfile路径填写：ssr/ssr3.2.2-v1.1/Dockfile
+    Dockerfile路径填写：ssr/ssr3.2.2-v1.1/Dockerfile
     构建目录：ssr/ssr3.2.2-v1.1
 
 7、通过立即构建，启动镜像构建，等待构建日志中显示成功；构建成功后就可以去实际启动服务了；
