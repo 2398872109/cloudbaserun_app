@@ -1,4 +1,4 @@
-# Shadowsocksr
+# Shadowsocks-r
 
 ## 使用方法
 
@@ -19,8 +19,8 @@
 
 6、按如下配置镜像构建规则：
     触发规则分支选择main；
-    Dockerfile路径填写：ssr/shadowsocksr-origin/Dockerfile
-    构建目录：ssr/shadowsocksr-origin
+    Dockerfile路径填写：ssr/ssr3.2.2-v1.1/Dockfile
+    构建目录：ssr/ssr3.2.2-v1.1
 
 7、通过立即构建，启动镜像构建，等待构建日志中显示成功；构建成功后就可以去实际启动服务了；
 
@@ -31,7 +31,7 @@
 
 1、使用前置步骤中构建成功的进行启动云开发弹性服务实例，选择镜像时可以通过悬停查看镜像的完整名称显示，确保和前置步骤的可以对上；
 
-* 默认端口 51348，默认密码 123456，默认加密方式 aes-128-ctr，默认协议 auth_aes128_md5，默认混淆 tls1.2_ticket_auth
+* 默认端口 9000，默认密码 password，默认加密方式 aes-256-cfb，默认协议 origin，默认混淆 plain
 * 如果需要修改默认配置，可以根据设置项，设置实例启动时的环境变量；
 
 2、实例启动后，获取实例外部IP；
@@ -51,11 +51,11 @@
 
 通过环境变量设置相关应用配置：
 
-* SERVER_PORT：默认 51348，可修改；
-* PASSWORD：默认 123456，可修改；
-* METHOD：默认 aes-128-ctr，可修改，建议一般情况下不调整
-* PROTOCOL：默认 auth_aes128_md5，可修改，建议一般情况下不调整
-* OBFS：：默认 tls1.2_ticket_auth_compatible，可修改，建议一般情况下不调整
+* SERVER_PORT：默认 9000，可修改；
+* PASSWORD：默认 password，可修改；
+* METHOD：默认 aes-256-cfb，可修改，建议一般情况下不调整
+* PROTOCOL：默认 origin，可修改，建议一般情况下不调整
+* OBFS：：默认 plain，可修改，建议一般情况下不调整
 
 ## 注意事项
 
@@ -69,9 +69,9 @@ IP、端口、用户名、密码是否正确。
 
 可以通过 telnet命令（Windows，linux）、nc命令（mac）测试IP和端口连通性：
 
-telnet用法：telnet xxx.xxx.xxx.xxx 51348
+telnet用法：telnet xxx.xxx.xxx.xxx 9000
 
-nc用法：nc -vz xxx.xxx.xxx.xxx 51348
+nc用法：nc -vz xxx.xxx.xxx.xxx 9000
 
 **需要重启实例**
 
