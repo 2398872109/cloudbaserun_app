@@ -54,7 +54,7 @@ sockd 相关：
 
 * SOCKD_PORT：默认 2020，可修改；
 * SOCKD_USERNAME：默认 root，可修改，需要与 SOCKD_PASSWORD 同时设置才生效；
-* SOCKD_PASSWORD：默认 12345678，可修改，需要与 SOCKD_USERNAME 同时设置才生效；
+* SOCKD_PASSWORD：默认 123456，可修改，需要与 SOCKD_USERNAME 同时设置才生效；
 
 ssr 相关：
 * SERVER_PORT：默认 9000，可修改；
